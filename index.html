@@ -35,14 +35,24 @@ const renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild( renderer.domElement );
- 
-       const geometry = new THREE.BoxGeometry(2,2,2);
-            const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add( cube );
-
-            
- const controls = new OrbitControls(camera , renderer.domElement);
+       
+       const loader = new GLTFLoader();
+  
+        var ogj;
+        loader.load( 'https://raw.githubusercontent.com/AllaJohn/AllaJohn.github.io/main/scene.gltf', function ( gltf,) {
+          
+          
+            ogj =gltf.scene;
+            scene.add(gltf.scene);
+          
+        } );
+        
+        
+        
+        
+        
+        scene.background = new THREE.Color(0x00ffff);
+            const controls = new OrbitControls(camera , renderer.domElement);
         
             var light = new THREE.HemisphereLight(0xffffff,0x000000,5);
             scene.add(light);
@@ -55,6 +65,9 @@ document.body.appendChild( renderer.domElement );
             }
         
             animate();
+        
+ 
+       
         
 
 
