@@ -42,17 +42,20 @@ document.body.appendChild( renderer.domElement );
             scene.add( cube );
 
             
-
-            const animate = function () {
-                requestAnimationFrame( animate );
-               controls.update();
-
-
-                renderer.render( scene, camera );
-            };
-
-            animate();
-
+ const controls = new OrbitControls(camera , renderer.domElement);
+        
+            var light = new THREE.HemisphereLight(0xffffff,0x000000,5);
+            scene.add(light);
+            camera.position.set(0,5,2);
+            function animate(){
+                requestAnimationFrame(animate);
+                controls.update();
+                
+                renderer.render(scene,camera);
+            }
+        
+            animate();
+        
 
 
 console.log(scene);
