@@ -32,7 +32,9 @@ a:link{
     text-transform: uppercase;
     border-radius: 80px;  
     letter-spacing: 2px;
-  color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
 
     transition: 2s;
     
