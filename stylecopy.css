@@ -55,8 +55,7 @@
   }
   
   .img-slider .slide .info h2{
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-text-stroke-width: 0.3px;
+color: rgb(255, 255, 255);
 
     left: 2%;
     margin-top: -3%;
