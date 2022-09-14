@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     background: #ffffff;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   
   .img-slider{
@@ -61,7 +61,7 @@
 
     left: 2%;
     margin-top: -3%;
-    font-size: 190px;
+       font-size: calc(90px + 5vw);
     text-transform: uppercase;
     letter-spacing: 2px;
     z-index: 13;
@@ -72,7 +72,7 @@
     position: absolute;
     width: 40%;
     color: #fff;
-    top: 80%;
+    top: 78%;
     left: 78%;
     background: rgba(0, 0, 0, 0.1);
     font-size: 16px;
